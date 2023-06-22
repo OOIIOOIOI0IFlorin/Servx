@@ -1,0 +1,46 @@
+﻿@page "/reservation"  
+
+<div class="center-form">
+                <h1>@Message</h1>
+                <div class="contact-form" style="justify-content:center; display: flex;">
+               
+                   <EditForm Model="@resevationModelForm" OnValidSubmit="@Submit">
+                        <div class="form-group">
+                            <br />
+                            <input type="text" @bind="@resevationModelForm.Name" class="form-control" placeholder="Numele tau" name="Name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" @bind="@resevationModelForm.Tel" class="form-control" placeholder="Numarul de telefon" name="Tel" />
+                        </div>
+                        <div class="form-group">
+                            <input type="datetime" @bind="@resevationModelForm.DateTime" class="form-control" placeholder="Data si ora programarii" name="Data" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" @bind="@resevationModelForm.Reason" class="form-control" placeholder="Motivul programarii" name="Reason" />
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" @bind="@resevationModelForm.Description" placeholder="Descriere" name="Description"></textarea>
+                        </div>
+                        <div>
+                            <button class="center button-28" type="submit">Trimite</button>
+                        </div>
+                    </EditForm>
+                </div>
+
+            
+        </div>
+
+
+        <!-- Main content end-->
+        <!-- Newsletter Start -->
+        <div class="newsletter">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Aboneaza-te pentru noutati</h2>
+                </div>
+                <div class="form">
+                    <input class="form-control" placeholder="Email-ul tau">
+                    <button class="btn">Trimite</button>
+                </div>
+            </div>
+        </div>
